@@ -9,26 +9,74 @@
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:showIn="@layout/activity_main" tools:context=".MainActivity">
 
-    <TextView android:text="Hello World!23" android:layout_width="wrap_content"
+    <TextView android:text="Bienvenue dans le premier projet de SEA" android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView" />
+        android:id="@+id/textView1" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/button"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="94dp"
-        android:clickable="true" />
+        android:text="Cliquer pour calculer votre QI"
+        android:id="@+id/bt_test"
+        android:clickable="true"
+        android:layout_gravity="center_horizontal"
+        android:onClick="bt_test_onclick"
+        android:layout_below="@+id/TxtPrenom"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="36dp" />
 
-    <Switch
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Switch"
-        android:id="@+id/switch1"
-        android:layout_centerVertical="true"
-        android:layout_alignEnd="@+id/button" />
+        android:id="@+id/TxtNom"
+        android:text="Nom ?"
+        android:layout_below="@+id/textView1" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/TxtPrenom"
+        android:text="Prenom ?"
+        android:layout_below="@+id/TxtNom"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Votre QI : "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewQi"
+        android:layout_below="@+id/bt_test"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Button"
+        android:id="@+id/button2"
+        android:onClick="bt2_onclick"
+        android:layout_alignBaseline="@+id/TxtPrenom"
+        android:layout_alignBottom="@+id/TxtPrenom"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="29dp" />
+
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textViewQi"
+        android:layout_alignParentEnd="true">
+    </ListView>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AfficherTab"
+        android:id="@+id/bt_tableauAffich"
+        android:onClick="bttab_onclick"
+        android:layout_below="@+id/TxtPrenom"
+        android:layout_alignEnd="@+id/button2" />
+
 </RelativeLayout>
